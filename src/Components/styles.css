@@ -1,0 +1,62 @@
+.login-container {
+    margin-top: 15%;
+}
+
+.calculorBase {
+    border-radius: 5px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.calculorBase h3,
+h5 {
+    text-align: center;
+    color: white;
+}
+
+.calculorBase hr {
+    background-color: white;
+}
+
+.resultCalculator {
+    height: 150px;
+    background-color: #333;
+    border-radius: 10px 10px 0 0;
+}
+
+.numberCalculator {
+    border-radius: 0 0 10px 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #333;
+}
+
+.numberCalculator button {
+    width: 90%;
+    height: 90px;
+    margin: 5px;
+    font-size: 40px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contButton {
+    text-align: center;
+}
+
+.resultDiv {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.divBtnResult {
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+    width: 90%;
+    height: 90%;
+    font-size: 40px;
+    border-radius: 10px;
+}
+
+.resultDiv :hover {
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    background-color: rgb(53, 14, 224) !important;
+}
