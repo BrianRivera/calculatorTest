@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 //using memo for eviting the refresh of the component
-export const Keys = memo(({setExercise}) => {
+export const Key2 = memo(({setExercise}) => {
 
 /*
 used to decrease the identical code of the buttons, the return is traversed
@@ -8,7 +8,7 @@ the lists using the .map and creating the buttons
 */
     
 const keySimbol = [1,2,3,4,5,6,7,8,9,0,'.'];
-const keyNumeric = ['+','-','*','/'];
+const keyNumeric = ['+','-','*','/',1,2,3,'(',4,5,6,')',7,8,9,'<-',0,'.'];
 
 /*
 function applied to all buttons with the exception of the AC and = to update the status of the exercise:
@@ -33,11 +33,11 @@ const handleSimbolNumber = (e) => {
         (keyNumeric.includes(last.ex.substr(-1)) && keyNumeric.includes(value)) 
         && (last.ex = last.ex.slice(0, -1));
 
-        const lastEx = (last.ex === '0' && value !== '.' ) ? 
+        let lastEx = (last.ex === '0' && value !== '.' ) ? 
         (keyNumeric.includes(value))? last.ex : '' 
         : last.ex;
 
-        return ({...last,ex:`${lastEx + value}`,respAct: false}); 
+        return ({...last,ex:`${lastEx + value}`}); 
         
     });
 };
@@ -55,8 +55,6 @@ const handleReset = () => {
 
     return (
             <>
-            <div className="col-sm-12">
-                <div className="row">
                     {
                        keyNumeric.map((simb,index) =>(
                         <div key={index.toString()} className="col-sm-3 contButton">
@@ -64,22 +62,9 @@ const handleReset = () => {
                         </div>
                        )) 
                     }
-                </div>
-            </div>
-            <div className="col-sm-9">
-                <div className="row">
-                    {
-                       keySimbol.map((numb,index) =>(
-                        <div key={index.toString()} className="col-sm-4 contButton">
-                            <button type="button" className="btn" onClick={handleSimbolNumber}  value={numb}>{numb}</button>
-                        </div>
-                       )) 
-                    }
-                    <div className="col-sm-4 contButton">
+                    <div className="col-sm-3 contButton">
                         <button type="button" className="btn btn-danger" onClick={handleReset}>AC</button>
                     </div>
-                </div>
-            </div>
             </>
     )
 });
