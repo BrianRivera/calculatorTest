@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <Calculator /> component matches the snapshot | answer and exercise should take default values 1`] = `
+<div
+  className="container calculator-container"
+>
+  <div
+    className="col-md-6 calculatorBase mx-auto"
+  >
+    <br />
+    <div
+      className="resultCalculator"
+    >
+      <h5>
+        0
+      </h5>
+      <hr />
+      <h3>
+        0
+      </h3>
+    </div>
+    <div
+      className="numberCalculator"
+    >
+      <div
+        className="row"
+      >
+        <Memo()
+          setExercise={[Function]}
+        />
+        <div
+          className="col-sm-3 resultDiv"
+        >
+          <div
+            className="divBtnResult bg-primary text-white"
+            onClick={[Function]}
+          >
+            <h1>
+              =
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+  </div>
+</div>
+`;

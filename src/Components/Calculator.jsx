@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './styles.css';
 import { Keys } from './Keys';
-import { evaluate } from 'mathjs'
+import { evaluate, round } from 'mathjs'
 
 //if the initial value is not sent the initial value is equal to 0
 export const Calculator = ( {initialValue = 0} ) => {
@@ -28,9 +28,8 @@ export const Calculator = ( {initialValue = 0} ) => {
 
     const handleResult = () => {
      try {  
-            const result =  evaluate(exercise.ex);
+            const result =  round(evaluate(exercise.ex),4);
             setExercise({...exercise,res:result,respAct: true});
-            
      } catch (error) {
             alert('Error, por favor revise el ejercicio');
      }
@@ -54,7 +53,7 @@ export const Calculator = ( {initialValue = 0} ) => {
 
                         <div className="col-sm-3 resultDiv">  
                             <div className="divBtnResult bg-primary text-white" onClick={handleResult}>
-                               <h1>=</h1>
+                                <h1>=</h1>
                             </div>
                         </div>
 

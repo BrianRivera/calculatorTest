@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <Keys /> component matches the snapshot 1`] = `
+<Fragment>
+  <div
+    className="col-sm-12"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-3 contButton"
+        key="0"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value="+"
+        >
+          +
+        </button>
+      </div>
+      <div
+        className="col-sm-3 contButton"
+        key="1"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value="-"
+        >
+          -
+        </button>
+      </div>
+      <div
+        className="col-sm-3 contButton"
+        key="2"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value="*"
+        >
+          *
+        </button>
+      </div>
+      <div
+        className="col-sm-3 contButton"
+        key="3"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value="/"
+        >
+          /
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-sm-9"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col-sm-4 contButton"
+        key="0"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={1}
+        >
+          1
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="1"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={2}
+        >
+          2
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="2"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={3}
+        >
+          3
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="3"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={4}
+        >
+          4
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="4"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={5}
+        >
+          5
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="5"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={6}
+        >
+          6
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="6"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={7}
+        >
+          7
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="7"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={8}
+        >
+          8
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="8"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={9}
+        >
+          9
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="9"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value={0}
+        >
+          0
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+        key="10"
+      >
+        <button
+          className="btn"
+          onClick={[Function]}
+          type="button"
+          value="."
+        >
+          .
+        </button>
+      </div>
+      <div
+        className="col-sm-4 contButton"
+      >
+        <button
+          className="btn btn-danger"
+          onClick={[Function]}
+          type="button"
+        >
+          AC
+        </button>
+      </div>
+    </div>
+  </div>
+</Fragment>
+`;
