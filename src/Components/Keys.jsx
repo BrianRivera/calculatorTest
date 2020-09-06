@@ -1,6 +1,6 @@
-import React from 'react'
-
-export const Keys = ({setExercise}) => {
+import React, { memo } from 'react'
+//using memo for eviting the refresh of the component
+export const Keys = memo(({setExercise}) => {
 
 /*
 used to decrease the identical code of the buttons, the return is traversed
@@ -16,17 +16,29 @@ function applied to all buttons with the exception of the AC and = to update the
 
 2.-use the property of the setState (setExercise) that fetches the current value of the state 
 
-3.-valid, if the current exercise is '0' and the new value is '.' to add the
-new value to exercise, if not '.' replace 0 with the new number
+3.-validates if the last digit of the exercise and the value of the button 
+are mathematical symbols, if they are, replace the last digit with the new value
 
-4.-copy the previous values ​​of the state and replace the value of the exercise, with the new value
+4.-valid if the current exercise is '0' and the new value is '.' or some symbol of mathematical operation to add the
+new courage to exercise, if not '.' replace 0 with the new number
+
+5.-copy the previous values ​​of the state and replace the value of the exercise, with the new value
 */
 
 const handleSimbolNumber = (e) => {
     const value = e.target.value;
+
     setExercise(last => {
-        let lastEx = (last.ex === '0' && value !== '.') ? '' : last.ex;
-        return ({...last,ex:`${lastEx + value}`}) 
+        
+        (keyNumeric.includes(last.ex.substr(-1)) && keyNumeric.includes(value)) 
+        && (last.ex = last.ex.slice(0, -1));
+
+        let lastEx = (last.ex === '0' && value !== '.' ) ? 
+        (keyNumeric.includes(value))? last.ex : '' 
+        : last.ex;
+
+        return ({...last,ex:`${lastEx + value}`}); 
+        
     });
 };
 
@@ -36,33 +48,32 @@ const handleReset = () => {
 };
 
     return (
-                <>
-                <div className="col-sm-12">
-                    <div className="row">
-                        {
-                           keyNumeric.map((simb,index) =>(
-                            <div key={index.toString()} className="col-sm-3 contButton">
-                                <button  type="button" className="btn btn-outline-dark" onClick={handleSimbolNumber} value={simb}>{simb}</button>
-                            </div>
-                           )) 
-                        }
-                    </div>
-                </div>
-                <div className="col-sm-9">
-                    <div className="row">
-                        {
-                           keySimbol.map((numb,index) =>(
-                            <div key={index.toString()} className="col-sm-4 contButton">
-                                <button type="button" className="btn btn-outline-dark" onClick={handleSimbolNumber}  value={numb}>{numb}</button>
-                            </div>
-                           )) 
-                        }
-                        <div className="col-sm-4 contButton">
-                            <button type="button" className="btn btn-danger" onClick={handleReset}>AC</button>
+            <>
+            <div className="col-sm-12">
+                <div className="row">
+                    {
+                       keyNumeric.map((simb,index) =>(
+                        <div key={index.toString()} className="col-sm-3 contButton">
+                            <button  type="button" className="btn" onClick={handleSimbolNumber} value={simb}>{simb}</button>
                         </div>
-
+                       )) 
+                    }
+                </div>
+            </div>
+            <div className="col-sm-9">
+                <div className="row">
+                    {
+                       keySimbol.map((numb,index) =>(
+                        <div key={index.toString()} className="col-sm-4 contButton">
+                            <button type="button" className="btn" onClick={handleSimbolNumber}  value={numb}>{numb}</button>
+                        </div>
+                       )) 
+                    }
+                    <div className="col-sm-4 contButton">
+                        <button type="button" className="btn btn-danger" onClick={handleReset}>AC</button>
                     </div>
                 </div>
-                </>
+            </div>
+            </>
     )
-};
+});
