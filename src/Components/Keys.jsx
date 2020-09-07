@@ -25,7 +25,7 @@ new courage to exercise, if not '.' replace 0 with the new number
 5.-copy the previous values ​​of the state and replace the value of the exercise, with the new value
 */
 
-const handleSimbolNumber = (e) => {
+const handleSymbolNumber = (e) => {
     const value = e.target.value;
 
     setExercise(last => {
@@ -42,7 +42,7 @@ const handleSimbolNumber = (e) => {
     });
 };
 
-//returns the state values ​​to 0
+//or clears the last digit entered depending on the status of the answer 
 const handleReset = () => {
     setExercise(last =>{
         const last1 = (last.ex.length>1)? (last.ex.slice(0, -1)): '0';
@@ -60,7 +60,7 @@ const handleReset = () => {
                     {
                        keySymbol.map((simb,index) =>(
                         <div key={index.toString()} className="col-sm-3 contButton">
-                            <button  type="button" className="btn" onClick={handleSimbolNumber} value={simb}>{simb}</button>
+                            <button  type="button" className="btn" onClick={handleSymbolNumber} value={simb}>{simb}</button>
                         </div>
                        )) 
                     }
@@ -71,7 +71,7 @@ const handleReset = () => {
                     {
                        keyNumeric.map((numb,index) =>(
                         <div key={index.toString()} className="col-sm-4 contButton">
-                            <button type="button" className="btn" onClick={handleSimbolNumber}  value={numb}>{numb}</button>
+                            <button type="button" className="btn" onClick={handleSymbolNumber}  value={numb}>{numb}</button>
                         </div>
                        )) 
                     }
