@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
 import { Keys } from './Keys';
 import { evaluate, round } from 'mathjs'
+import './styles.css';
 
 //if the initial value is not sent the initial value is equal to 0
 export const Calculator = ( {initialValue = 0} ) => {
@@ -64,40 +64,6 @@ export const Calculator = ( {initialValue = 0} ) => {
         </div>
     )
 }
-
-
-/*
-
-return (
-        <div className="container calculator-container">
-            <div className="col-md-6 calculatorBase mx-auto">
-                <br/>
-                
-                <div className="resultCalculator">
-                    <h5>{exercise.ex}</h5>
-                        <hr/>
-                    <h3>{exercise.res}</h3>
-                </div>
-                
-                <div className="numberCalculator">
-                    <div className="row">
-                        <Keys setExercise={setExercise}></Keys>
-
-                        <div className="col-sm-3 resultDiv">  
-                            <div className="divBtnResult bg-primary text-white" onClick={handleResult}>
-                               <h1>=</h1>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <br/>
-            </div>
-        </div>
-    )
-
-
-*/
 
 // propType, is used to designate the initialValue as a variable of type numeric
 Calculator.propTypes = {

@@ -4,7 +4,7 @@ import { Calculator } from './Components/Calculator'
 export const CalculatorApp = () => {
     return (
         <div>
-            <Calculator initialValue={123}></Calculator>
+            <Calculator initialValue={10}></Calculator>
         </div>
     )
 }

@@ -7,8 +7,8 @@ used to decrease the identical code of the buttons, the return is traversed
 the lists using the .map and creating the buttons
 */
     
-const keySimbol = [1,2,3,4,5,6,7,8,9,0,'.'];
-const keyNumeric = ['+','-','*','/'];
+const keyNumeric = [1,2,3,4,5,6,7,8,9,0,'.'];
+const keySymbol = ['+','-','*','/'];
 
 /*
 function applied to all buttons with the exception of the AC and = to update the status of the exercise:
@@ -30,11 +30,11 @@ const handleSimbolNumber = (e) => {
 
     setExercise(last => {
         
-        (keyNumeric.includes(last.ex.substr(-1)) && keyNumeric.includes(value)) 
+        (keySymbol.includes(last.ex.substr(-1)) && keySymbol.includes(value)) 
         && (last.ex = last.ex.slice(0, -1));
 
         const lastEx = (last.ex === '0' && value !== '.' ) ? 
-        (keyNumeric.includes(value))? last.ex : '' 
+        (keySymbol.includes(value))? last.ex : '' 
         : last.ex;
 
         return ({...last,ex:`${lastEx + value}`,respAct: false}); 
@@ -58,7 +58,7 @@ const handleReset = () => {
             <div className="col-sm-12">
                 <div className="row">
                     {
-                       keyNumeric.map((simb,index) =>(
+                       keySymbol.map((simb,index) =>(
                         <div key={index.toString()} className="col-sm-3 contButton">
                             <button  type="button" className="btn" onClick={handleSimbolNumber} value={simb}>{simb}</button>
                         </div>
@@ -69,7 +69,7 @@ const handleReset = () => {
             <div className="col-sm-9">
                 <div className="row">
                     {
-                       keySimbol.map((numb,index) =>(
+                       keyNumeric.map((numb,index) =>(
                         <div key={index.toString()} className="col-sm-4 contButton">
                             <button type="button" className="btn" onClick={handleSimbolNumber}  value={numb}>{numb}</button>
                         </div>
